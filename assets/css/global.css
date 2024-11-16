@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: 
+    linear-gradient(135deg, 
+      #FF9FF3 10%, 
+      #FF9FF3 10%,
+      #A239EA 25%,
+      #A239EA 25%,
+      #000000 50%,
+      #000000 50%,
+      #5C33F6 75%,
+      #5C33F6 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+    color: white;
+}
+
+.main {
+    margin: 1rem;
+    padding: .5rem;
+    border: 1px solid white;
+    border-radius: 16px;  
+}
+
+@keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        max-width: 1024px;
+        margin: 1rem auto;
+        border-radius: 10px;
+    }
+
+    .main::before, .main::after {
+        width: 70vw;
+    }
+}

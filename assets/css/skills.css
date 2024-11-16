@@ -1,0 +1,37 @@
+.acordeon .content .skills {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px 20px 30px;
+}
+
+.acordeon .content .skills .container-skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.acordeon .content .skills .skills-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 0px;
+}
+
+.acordeon .content .skills .skills-pessoais .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 430px) {
+    .acordeon .content .skills {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 30px 20px 30px;
+    }
+
+    .acordeon .content .skills .skills-pessoais .title {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+    }
+}
